@@ -1,0 +1,25 @@
+# ESP-IDF build outputs
+build/
+build-host/
+managed_components/
+.codex-runs/
+dependencies.lock
+sdkconfig.old
+
+# Host test binaries
+*.exe
+
+# Node / Tauri
+node_modules/
+target/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

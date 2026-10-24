@@ -1,0 +1,24 @@
+CONFIG_ESP_IRIS_OTA_DEFAULT_VIA_RECOVERY=y
+# CONFIG_ESP_IRIS_OTA is not set
+CONFIG_ESP_IRIS_USB_PRODUCT="ESP-Iris Mosaico hachimo_pet"
+CONFIG_ESP_IRIS_HEALTH_TIMEOUT_MS=45000
+
+# The application-owned pet link (hd_cdc.c) uses the TinyUSB CDC-ACM driver;
+# with the Iris USB transport off (sdkconfig.defaults), enable it explicitly.
+CONFIG_TINYUSB_CDC_ENABLED=y
+CONFIG_TINYUSB_CDC_RX_BUFSIZE=2048
+CONFIG_TINYUSB_CDC_TX_BUFSIZE=2048
+CONFIG_TINYUSB_CDC_EP_BUFSIZE=512
+
+# SPI-NAND block-device layers for the /nand LittleFS volume (pet widgets +
+# appearance packs). Mirrors perler_studio's verified configuration.
+CONFIG_NAND_FLASH_ENABLE_BDL=y
+CONFIG_LITTLEFS_CACHE_SIZE=2048
+
+# Software H.264 decoder: dual-core pack worker (renderer init expects it).
+CONFIG_ESP_H264_DUAL_TASK=y
+CONFIG_ESP_H264_DUAL_TASK_CORE=1
+CONFIG_ESP_H264_DUAL_TASK_PRIORITY=17
+
+# MJPEG appearance fallback decodes through LV_USE_TJPGD (renderer).
+CONFIG_LV_USE_TJPGD=y

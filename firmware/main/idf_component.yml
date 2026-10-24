@@ -1,0 +1,27 @@
+dependencies:
+  idf: ">=6.2"
+  georgik/raylib: "==6.0.0~2"
+  espressif/esp-gsp: "==1.5.1"
+  # Required by the engine's shared Raylib asset API, even without game assets.
+  espressif/esp_mmap_assets: "^2.0.0"
+  esp-mosaico-bsp:
+    version: "*"
+    override_path: "../../../submodule/esp-mosaico-bsp/components/esp-mosaico-bsp"
+  esp_iris:
+    version: "*"
+    override_path: "../../../submodule/esp-mosaico-utils/ESP-Iris/components/esp_iris"
+  # Match the BSP display adapter's supported LVGL headers. HachimoDock's CJK
+  # bitmap font (pet_p4_font_cn.c) is an lv_font_t consumed via glyph lookup only.
+  lvgl/lvgl: "==9.5.0"
+  # HachimoDock port: JSON Lines protocol core (IDF 6.x has no bundled cJSON).
+  espressif/cjson: "^1.7.19"
+  # HachimoDock appearance assets decode (software H.264, targets esp32s31).
+  espressif/esp_h264: "^1.4.1"
+  # PC pet link: the application owns High-Speed USB via TinyUSB CDC; ESP-Iris
+  # keeps its TCP transport for mosaico.py operations (see sdkconfig.defaults).
+  espressif/esp_tinyusb: ">=2.2.1,<3.0.0"
+  # /nand pet storage (widgets + appearance packs). The registry CDN 403s on
+  # this machine (same class as esp-gsp); use the verified local clone.
+  joltwallet/esp_littlefs:
+    version: "*"
+    override_path: "../../../../esp_littlefs"

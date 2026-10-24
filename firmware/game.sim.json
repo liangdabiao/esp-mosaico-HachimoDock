@@ -1,0 +1,27 @@
+{
+  "schema": "mosaico-game-sim/v1",
+  "sources": [
+    "main/hd_host_module.c",
+    "main/pet/pet_host_shims.c",
+    "main/pet/pet_host_device_stubs.c",
+    "main/pet/host_only/lv_font_shim.c",
+    "main/pet/host_only/cJSON.c",
+    "main/pet/pet_p4_renderer.c",
+    "main/pet/pet_p4_font_cn.c",
+    "main/pet/pet_p4_view.c",
+    "main/pet/pet_p4_behavior.c",
+    "main/pet/pet_p4_stats.c",
+    "main/pet/pet_p4_assets.c",
+    "main/pet/pet_p4_widget_data.c",
+    "main/pet/pet_p4_media.c",
+    "main/pet/pet_p4_media_codec.c",
+    "main/pet/pet_p4_miniapp.c",
+    "main/pet/pet_p4_game.c",
+    "main/pet/pet_p4_builtin_components_data.c",
+    "main/pet/pet_p4_touch_core.c",
+    "main/pet/pet_p4_input_core.c",
+    "main/pet/pet_p4_conversation.c",
+    "main/pet/pet_p4_system_cues.c",
+    "main/pet/pet_p4_instrument_core.c"
+  ]
+}
